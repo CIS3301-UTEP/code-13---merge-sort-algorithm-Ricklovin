@@ -7,14 +7,17 @@ def merge(half_left,half_right):
         if half_left[i] < half_right[j]:
             merged_list.append(half_left[i])
             i += 1
-        else:merged_list.append(half_right[j])
+        else:
+            merged_list.append(half_right[j])
         
-        j += 1
-        while i < len(half_left):merged_list.append(half_left[i])
-        i += 1
+            j += 1
+        while i < len(half_left):
+            merged_list.append(half_left[i])
+            i += 1
         
-        while j < len(half_right):merged_list.append(half_right[j])
-        j += 1
+        while j < len(half_right):
+            merged_list.append(half_right[j])
+            j += 1
         
         return merged_list
 
