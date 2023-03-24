@@ -1,7 +1,6 @@
 
-def merge(half_left,half_right):
-    i = 0
-    j = 0
+def merged(half_left,half_right):
+    i = j = 0
     merged_list = []
     while i < len(half_left) and j < len(half_right):
         if half_left[i] < half_right[j]:
@@ -36,11 +35,11 @@ def get_merge_sorted_list(unsorted_list):
     half_left = get_merge_sorted_list(f_half)
     half_right = get_merge_sorted_list(s_half)
 
-    return merge(half_left,half_right)
+    return merged(half_left,half_right)
 
 if __name__ == "__main__":
 
-    unsorted_list = [1,2,44,1,2,3,4,7,8,92,34,12,3,4,56,8,89,42,24,5,3]
+    unsorted_list = [1,2,1,2,3,7,8,9,1,]
 
 
-    print(merge(get_merge_sorted_list(unsorted_list)))
+    print(get_merge_sorted_list(unsorted_list))
